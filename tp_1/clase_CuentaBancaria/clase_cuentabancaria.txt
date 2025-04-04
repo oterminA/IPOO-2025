@@ -1,0 +1,28 @@
+//*entrada
+//*salida
+//*proceso
+//*ponerle los tipos a las variables
+//*armar bien las funciones
+
+0.5:Crea una clase CuentaBancaria con los siguientes atributos: número de cuenta, el DNI del cliente, el saldo actual y el interés anual que se aplica a la cuenta. 
+Define en la clase los siguientes métodos:
+1. Método constructor _ _construct() que recibe como parámetros los valores iniciales para los atributos de la clase.
+2.Los método de acceso de cada uno de los atributos de la clase.
+
+3.actualizarSaldo(): actualizará el saldo de la cuenta aplicándole el interés diario (interés anual dividido entre 365 aplicado al saldo actual).
+    -return $this->setSaldoActual($this->getInteresAnual() / DIAS_ANIO);
+
+4.depositar($cant): permitirá ingresar una cantidad de dinero en la cuenta.
+    -return $this->setSaldoActual($this->getSaldoActual + $cant);
+
+5.retirar($cant): permitirá sacar una cantidad de dinero de la cuenta (si hay saldo).
+    - if ($this->getSaldoActual()>0){
+        $retirar = $this->setSaldoActual($this->getSaldoActual - $cant);
+    }else{
+        $retirar = -1;
+    }
+    return $retirar;
+
+
+6.Redefinir el método _ _toString() para que retorne la información de los atributos de la clase.
+7.Crear un script Test_CuentaBancaria que cree un objeto CuentaBancaria e invoque a cada uno de los métodos implementados.

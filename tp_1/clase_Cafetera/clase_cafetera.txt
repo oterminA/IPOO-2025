@@ -1,0 +1,26 @@
+//*entrada
+//*salida
+//*proceso
+//*ponerle los tipos a las variables
+//*armar bien las funciones
+
+    0,5. Desarrollar una clase Cafetera con los atributos capacidadMaxima (la cantidad máxima de café que puede contener la cafetera) y cantidadActual (la cantidad actual de café que hay en la cafetera).  
+    1. Método constructor _ _construct() que recibe como parámetros los valores iniciales para los atributos de la clase.
+    2.Los método de acceso de cada uno de los atributos de la clase.
+
+    3. llenarCafetera(): la cantidad actual debe ser igual a la capacidad de la cafetera:
+        -se puede hacer un if que evalúa si cantidadActual === capacidadMaxima, que devuelva un booleano o una bandera -1
+
+    4. servirTaza($cantidad): simula la acción de servir una taza con la capacidad indicada. Si la cantidad actual de café “no alcanza” para llenar la taza, se sirve lo que quede y se envía un mensaje al consumidor para que sepa porque no se le sirvió un taza completa:
+        -en el test se pide la cantidad de contenido de la taza?
+        -se hace la resta de cantidadActual y la cantidad de la taza, si el resultante es menor que la capacidad de la taza, se le avisa en el TEST al consumidor para que sepa que no se le sirvió la taza completa.
+
+    5.vaciarCafetera(): pone la cantidad de café actual en cero.
+        -$this->setCantidadActual(0)
+        
+    6. agregarCafe($cantidad): añade a la cafetera la cantidad de café indicada.
+        -$this->setCantidadActual($cantidad)
+
+    7. Redefinir el método _ _toString() para que retorne la información de los atributos de la clase.
+        $mensaje= "La capacidad máxima de la cafetera es: " . $this->getCapacidadMaxima() . "cc.\n" . "La cantidad actual de café en la cafetera es: " . $this->getCantidadActual() . "cc.\n"
+    8. Crear un script Test_Cafetera que cree un objeto Cafetera e invoque a cada uno de los métodos implementados.
