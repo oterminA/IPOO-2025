@@ -32,19 +32,19 @@ class Teatro
     }
 
     // modificadoras set
-    public function setNombreTeatro($nuevoNombre): void
+    public function setNombreTeatro($nombre): void
     {
-        $this->nombreTeatro = $nuevoNombre;
+        $this->nombreTeatro = $nombre;
     }
 
-    public function setDireccionTeatro($nuevaDireccion): void
+    public function setDireccionTeatro($direccion): void
     {
-        $this->direccionTeatro = $nuevaDireccion;
+        $this->direccionTeatro = $direccion;
     }
 
-    public function setArregloFunciones($nuevasFunciones): void
+    public function setArregloFunciones($aFunciones): void
     {
-        $this->arrayFunciones = $nuevasFunciones;
+        $this->arrayFunciones = $aFunciones;
     }
 
     // metodos nuevos
