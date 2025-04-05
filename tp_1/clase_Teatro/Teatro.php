@@ -1,101 +1,115 @@
 <?php
-//Un teatro se caracteriza por su nombre y su dirección y en él se realizan 4 funciones al día. Cada función tiene un nombre y un precio. Realice el diseño de la clase Teatro e indique qué métodos tendría que tener la clase, teniendo en cuenta que se pueda cambiar el nombre del teatro y la dirección, el nombre de un función y el precio. Implementar las 4 funciones usando array de array asociativo. Cada función es un array asociativo con las claves “nombre” y “precio”.
 
 class Teatro
 {
-    //variables instancia
+    // variables instancia
     private $nombreTeatro;
     private $direccionTeatro;
-    private $arrayFunciones;
-    //método constructor
-    public function __construct($nombreT, $direccionT)
+    private $arrayFunciones; // array de 4 funciones
+
+    // metodo constructor
+    public function __construct($nombre, $direccion, $aFunciones)
     {
-        $this->nombreTeatro = $nombreT;
-        $this->direccionTeatro = $direccionT;
-        $this->arrayFunciones = [];
+        $this->nombreTeatro = $nombre;
+        $this->direccionTeatro = $direccion;
+        $this->arrayFunciones = $aFunciones;
     }
 
-    //observadoras-get
-    public function getNombreTeatro()
+    // observadoras get
+    public function getNombreTeatro(): string
     {
         return $this->nombreTeatro;
     }
-    public function getDireccionTeatro()
+
+    public function getDireccionTeatro(): string
     {
         return $this->direccionTeatro;
     }
-    public function getFunciones()
+
+    public function getArregloFunciones(): array
     {
         return $this->arrayFunciones;
     }
 
-    //modificadoras-set
-    public function setNombreTeatro($nombreT)
+    // modificadoras set
+    public function setNombreTeatro($nuevoNombre): void
     {
-        $this->nombreTeatro = $nombreT;
-    }
-    public function setDireccionTeatro($direccionT)
-    {
-        $this->direccionTeatro = $direccionT;
-    }
-    public function setFunciones()
-    {
-        $this->arrayFunciones  = [];
+        $this->nombreTeatro = $nuevoNombre;
     }
 
-    //metodos nuevos
+    public function setDireccionTeatro($nuevaDireccion): void
+    {
+        $this->direccionTeatro = $nuevaDireccion;
+    }
+
+    public function setArregloFunciones($nuevasFunciones): void
+    {
+        $this->arrayFunciones = $nuevasFunciones;
+    }
+
+    // metodos nuevos
     /**
-     * se puede cambiar el nombre del teatro 
-     * 
-     * @return string $cambio
+     * cambia el nombre del teatro
+     * @param string $cambioN
+     * @return string
      */
-    public function cambiarNombreTeatro($cambio)
+    public function cambiarNombreTeatro(string $cambioNombre): string
     {
-        $this->setNombreTeatro($cambio);
-        $cambio = $this->getNombreTeatro();
-        return $cambio;
+        $this->setNombreTeatro($cambioNombre);
+        return $this->getNombreTeatro();
     }
 
     /**
-     * se puede cambiar la direccion del teatro 
-     * 
-     * @return string $cambio
+     * cambia la direccion del teatro
+     * @param string $cambioD
+     * @return string
      */
-    public function cambiarDireccionTeatro($cambio)
+    public function cambiarDireccionTeatro(string $cambioDireccion): string
     {
-        $this->setDireccionTeatro($cambio);
-        $cambio = $this->getDireccionTeatro();
-        return $cambio;
+        $this->setDireccionTeatro($cambioDireccion);
+        return $this->getDireccionTeatro();
     }
 
     /**
-     * muestra el arreglo de funciones
+     * cambia la informacion de las funciones del teatro
+     * @param int $indice
+     * @param string $nombreNuevoFuncion
+     * @param float $nuevoPrecioFuncion
+     * @return array
+     */
+    public function cambiarFuncion(int $indice, string $nuevoNombreFuncion, float $nuevoPrecioFuncion): array
+    {
+        if ($indice >= 0 && $indice < 4) {
+            $this->arrayFunciones[$indice] = [
+                "nombre" => $nuevoNombreFuncion,
+                "precio" => $nuevoPrecioFuncion
+            ];
+        }
+        return $this->arrayFunciones;
+    }
+
+    /**
+     * muestra las funciones teatrales del arreglo
+     * @return array $cadenaArreglo
      */
     public function mostrarFunciones()
     {
-        $arrayFunciones = $this->getFunciones();
-        $cadena = "";
-        foreach ($arrayFunciones as $indice => $elemento) {
-            $cadena = "Funcion " . ($indice + 1) . ":\n" . "Nombre: " . $elemento["nombre"] . "\n" . "Precio: $" . $elemento["precio"] . "\n";
+        //Array $cadenaArreglo
+        $cadenaArreglo = "";
+        foreach ($this->getArregloFunciones() as $indice => $funcion) {
+            $cadenaArreglo .= ">Función " . ($indice + 1) . ": " . $funcion["nombre"] . "\n";
+            $cadenaArreglo .= ">Precio: $" . $funcion["precio"] . "\n";
         }
-        return $cadena;
+        return $cadenaArreglo;
     }
 
-
-    /**
-     * se puede cambiar el nombre y el precio de las funciones
-     */
-    // public function cambiarFunciones($indice,$nombreActual, $nombreN, $precioN) {
-       
-    // }
-
-
-    //redefinición metodo __toString()
-    public function __toString()
+    // redefinición del método __toString()
+    public function __toString(): string
     {
-        $mensaje = ">Nombre del teatro: " . $this->getNombreTeatro() . "\n" .
-            ">Direccion del teatro: " . $this->getDireccionTeatro() . "\n" ; 
-            //falta agregar las funciones
+        $mostrar = $this->mostrarFunciones();
+        $mensaje = ">Nombre del teatro: " . $this->nombreTeatro . "\n" .
+            ">Dirección: " . $this->direccionTeatro . "\n" .
+            $mostrar;
         return $mensaje;
     }
 }
