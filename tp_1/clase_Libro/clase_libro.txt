@@ -1,0 +1,25 @@
+    //
+    //
+    //
+    0.5.Cree una clase Libro que tenga los atributos ISBN, titulo, año de edición, editorial, nombre y apellido del autor. Defina en la clase los siguientes métodos
+
+    1.Método constructor _ _construct() que recibe como parámetros los valores iniciales para los atributos de la clase.
+    2.Los método de acceso de cada uno de los atributos de la clase.
+    3.Método	toString() que retorne la información de los atributos de la clase.
+
+    4.perteneceEditorial($peditorial): indica si el libro pertenece a una editorial dada. Recibe como parámetro una editorial y devuelve un valor verdadero/falso:
+            -puede ser que me meta al arreglo y en un if pregunte que si el nombre de la editorial coincide con el del arreglo, si es asi se devuelve true
+
+    5.aniosdesdeEdicion(): método que retorna los años que han pasado desde que el libro fue editado.
+        -$this->setAnioEdicionLibro($this->getAnioEdicionLibro - $anioActual);
+        return $this->getAnioEdicionLibro;
+
+    6.Cree un script TestLibro que:
+        6.1 defina el método iguales($plibro,$parreglo): dada una colección de libros, indica si el libro pasado por parámetro ya se encuentra en dicha colección.
+            - tendría que comparar el nombre de $plibro, con el arreglo. Sería un while, donde la segunda condicion es que $plibro === $nombreLibro o algo así. Cuando pasa eso muestra por pantalla que el libro está dentro de la coleccion.
+
+        6.2 defina el método librodeEditoriales($arreglolibros, $peditorial): método que retorna un arreglo asociativo con todos los libros publicados por la editorial dada:
+            -por cada libro, uso el método perteneceEditorial(). Si da true, lo guardo en un nuevo arreglo. Devuelvo ese arreglo con los libros encontrados.
+
+
+        6.3 cree al menos tres objetos libros e invoque a cada uno de los métodos implementados en la clase Libro.
