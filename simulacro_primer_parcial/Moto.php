@@ -103,7 +103,7 @@ class Moto
 
             $venta = $this->getCostoMoto() + $this->getCostoMoto() * ($aniosTranscurridos * $this->getPorcentajeIncAnual());
         } else {
-            $venta = -1; //?
+            $venta = -1; //significa que la moto no es activa
         }
         return $venta;
     }
