@@ -4,7 +4,7 @@ class Cliente
     //atributos (variables instancias)
     private string $nombreCliente;
     private string $apellidoCliente;
-    private bool $estadoBaja; ////ojo con esto
+    private bool $estadoBaja; 
     private int $tipoDocumento;
     private int $numeroDocumento;
 
