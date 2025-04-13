@@ -168,10 +168,10 @@ class Empresa
             $cliente = $elementoVenta->getObjCliente();
     
             if ($cliente->getTipoDoc() == $tipoDoc && $cliente->getNumDoc() == $numDoc) {
-                $arrayVentasRealizadas[] = $elementoVenta;
+               $arrayVentasHechasCliente= array_push($arrayVentasHechasCliente,  $cliente);
             }
         }
-        return $arrayVentasRealizadas;
+        return $arrayVentasHechasCliente;
     }
 
 }
