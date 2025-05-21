@@ -79,7 +79,7 @@ class Vagon{
     */
     public function calcularPesoVagon(){
         //no entiendo que tendria que hacer este metodo?? solo poner el peso vacio????? porque no hay una base para el metodo que pueda despues redefinir, o sea en las otras dos clases tengo que usar dos operaciones diferentes para calcular el peso?? 
-        //PREGUNTAAAAAAAAAAAAAAAAAAAAA cuando redefino es en un método aparte? o sea puede redefinirse dentro de otro metodo???
+        //PREGUNTA: cuando redefino es en un método aparte? o sea puede redefinirse dentro de otro metodo???
         return $this->getPesoVagonVacio();
     }
 
