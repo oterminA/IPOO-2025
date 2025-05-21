@@ -67,15 +67,14 @@ class Vagon_Carga extends Vagon
     //metodos nuevos
     /**
     * metodo polimorfico, redefinicion de calcularPesoVagon()
-    * ?????
     */
-    public function calcularPesoVagon(){
-        $pesoPadre = parent::calcularPesoVagon(); //acá se guarda el resultado del peso del vagon vacio, metodo heredado
-        $pesoCarga = $this->getPesoCargaTransportada();//guardo el peso de la carga
-        $pesoCargaActualizado = $pesoPadre + ($pesoCarga + ($pesoCarga * 0.2)); //El peso del vagón va a depender del peso de su carga más un índice que coincide con un 20 % del peso de la carga, dicho índice se guarda en cada vagón de carga?
-        $this->setPesoVagonVacio($pesoCargaActualizado);
-        return $pesoCargaActualizado; //devuelve el peso actualizado del vaogon    
-    }
+    // public function calcularPesoVagon(){
+    //     $pesoPadre = parent::calcularPesoVagon(); //acá se guarda el resultado del peso del vagon vacio, metodo heredado
+    //     $pesoCarga = $this->getPesoCargaTransportada();//guardo el peso de la carga
+    //     $pesoCargaActualizado = $pesoPadre + ($pesoCarga + ($pesoCarga * 0.2)); //El peso del vagón va a depender del peso de su carga más un índice que coincide con un 20 % del peso de la carga, dicho índice se guarda en cada vagón de carga?
+    //     $this->setPesoVagonVacio($pesoCargaActualizado);
+        // return $pesoCargaActualizado; //devuelve el peso actualizado del vaogon    
+    }//
     
 
 
