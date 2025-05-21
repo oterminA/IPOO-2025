@@ -76,16 +76,15 @@ class Vagon_Pasajeros extends Vagon
 
     /**
      * metodo polimorfico, redefinicion de calcularPesoVagon()
-     * ?????
     */
-    public function calcularPesoVagon(){
-        $pesoPadre = parent::calcularPesoVagon(); //acá se guarda el resultado del peso del vagon vacio, metodo heredado
-        $pesoPromedio = $this->getPesoPromedio(); //guardo el peso promedio que son 50kg
-        $cantidadPasajeros = $this->getCantidadPasajerosTransporta(); //guardo la cantidad de gente
-        $pesoVagonActualizado = $pesoPadre + ($pesoPromedio * $cantidadPasajeros) ;    //peso vagon vacio se calcula de acuerdo a la cant de pasajeros que se transporta y el peso promedio siendo 50kg
-        $this->setPesoVagonVacio($pesoVagonActualizado);  //seteo el valor 
-        return $pesoVagonActualizado; //se retorna el peso actualizado del vagon
-    }
+    // public function calcularPesoVagon(){
+    //     $pesoPadre = parent::calcularPesoVagon(); //acá se guarda el resultado del peso del vagon vacio, metodo heredado
+    //     $pesoPromedio = $this->getPesoPromedio(); //guardo el peso promedio que son 50kg
+    //     $cantidadPasajeros = $this->getCantidadPasajerosTransporta(); //guardo la cantidad de gente
+    //     $pesoVagonActualizado = $pesoPadre + ($pesoPromedio * $cantidadPasajeros) ;    //peso vagon vacio se calcula de acuerdo a la cant de pasajeros que se transporta y el peso promedio siendo 50kg
+    //     $this->setPesoVagonVacio($pesoVagonActualizado);  //seteo el valor 
+    //     return $pesoVagonActualizado; //se retorna el peso actualizado del vagon
+    // }
 
     /**
      * método que recibe por parámetro la cantidad de pasajeros que ingresan al vagón y tiene la responsabilidad de actualizar las variables instancias que representan el peso y la cantidad actual de pasajeros.El método debe devolver verdadero o falso según si se pudo o no agregar los pasajeros al vagón.
