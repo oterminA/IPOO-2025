@@ -23,14 +23,16 @@ class Vagon{
     private $largoVagon;
     private $anchoVagon;
     private $pesoVagonVacio; 
+    private $pesoActual; //?
 
     //metodo constructor
-    public function __construct($anio, $largo, $ancho, $pesoVacio)
+    public function __construct($anio, $largo, $ancho, $pesoVacio, $actual)
     {
         $this->anioInstalacion=$anio;
         $this->largoVagon=$largo;
         $this->anchoVagon=$ancho;
-        $this->pesoVagonVacio=$pesoVacio;   
+        $this->pesoVagonVacio=$pesoVacio; 
+        $this->pesoActual = $actual;
     }
 
     //metodos de accedo: getters  y setters
