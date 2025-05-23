@@ -23,14 +23,16 @@ class Vagon_Carga extends Vagon
     private $pesoMaximoTransporta;
     private $pesoCargaTransportada;
     //donde va el índice=0.2????
+    private $pesoTotal;
 
     //metodo constructor
-    public function __construct($anio, $largo, $ancho, $pesoVacio, $pesoTransporte, $pesoCarga)
+    public function __construct($anio, $largo, $ancho, $pesoVacio, $pesoTransporte, $pesoCarga, $total)
     {
         parent::__construct($anio, $largo, $ancho, $pesoVacio);
         //pongo el atributo normalmente
         $this->pesoMaximoTransporta = $pesoTransporte;
         $this->pesoCargaTransportada = $pesoCarga;
+        $this->pesoTotal = $total;
     }
 
     //metodos de accedo: getters  y setters
