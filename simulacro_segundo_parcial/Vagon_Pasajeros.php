@@ -21,16 +21,18 @@ class Vagon_Pasajeros extends Vagon
     private $cantidadMaximaPasajeros;
     private $cantidadPasajerosTransporta;
     private $pesoPromedio;
+    private $pesoTotal;
 
 
     //metodo constructor
-    public function __construct($anio, $largo, $ancho, $pesoVacio, $cantMaxPasajeros, $cantPasajTransporta)
+    public function __construct($anio, $largo, $ancho, $pesoVacio, $cantMaxPasajeros, $cantPasajTransporta, $total)
     {
         parent::__construct($anio, $largo, $ancho, $pesoVacio);
         //pongo el atributo normalmente
         $this->cantidadMaximaPasajeros = $cantMaxPasajeros;
         $this->cantidadPasajerosTransporta = $cantPasajTransporta;
         $this->pesoPromedio = 50; //lo pongo asi porque dice "considerando un peso promedio por pasajero de 50kg" 
+        $this->pesoTotal = $total;
     }
 
     //metodos de accedo: getters  y setters
