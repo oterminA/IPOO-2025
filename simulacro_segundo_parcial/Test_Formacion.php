@@ -6,6 +6,7 @@ include_once 'Vagon_Carga.php';
 include_once 'Formacion.php';
 
 // 1. Se crea un objeto locomotora con un peso de 188 toneladas y una velocidad de 140 km/h.
+//1 ton = 1000kg
 $objLocomotora = new Locomotora(188000, 140);
 
 // 2. Se crea 3 objetos con la información visualizada en la tabla:
