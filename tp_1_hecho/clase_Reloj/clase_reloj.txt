@@ -1,0 +1,3 @@
+Diseñar e implementar la clase Reloj que simule el comportamiento de un cronómetro digital
+(con los comportamientos: puesta_a_cero, incremento, etc.). Cuando el contador llegue a 23:59:59 y
+reciba el mensaje de incremento deberá pasar a 00:00:00.

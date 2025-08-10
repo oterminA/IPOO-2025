@@ -1,0 +1,15 @@
+Diseñar e implementar la clase Fecha. La clase deberá disponer de los atributos mínimos y
+necesarios para almacenar el día, el mes y el año, además de métodos que devuelvan un String con la
+fecha en forma abreviada (16/02/2000) y extendida (16 de febrero de 2000) . Implementar una función
+incremento, que reciba como parámetros un entero y una fecha, que retorne una nueva fecha, resultado
+de incrementar la fecha recibida por parámetro en el numero de días definido por el parámetro entero.
+Nota 1: Son años bisiestos los múltiplos de cuatro que no lo son de cien, salvo que lo sean de
+cuatrocientos, en cuyo caso si son bisiestos.
+Nota 2: Para la solución de este problema puede ser útil definir un método incrementa_un_dia
+
+
+si la fecha fuese 20/09/1998 y se quiere aumentar 12 dias --> 20+12 = 32, entonces
+        a) si el resultado es mayor a la cantidad de meses que tiene ese mes, tengo que calcular el excedente de dias que corresponde a los dias del mes siguiente, por ejemplo septiembre tiene 30-32=2, seria el 2 de octubre. O sea que tengo que hacer esa cuenta y sumar un mes mas. 
+        *) si al sumar un mes más, el numero del mes es mayor a 12, seteo el mes en 1
+        b) si el resultado es menor o igual a la cantidad de dias q tiene ese mes, tengo que setear los valores con la suma de dias y el resto queda igual
+        

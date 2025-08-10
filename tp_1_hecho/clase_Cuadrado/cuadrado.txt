@@ -1,0 +1,20 @@
+Crear una clase Cuadrado que modele cuadrados por medio de cuatro puntos (los vértices, son 4 y son coordenadas x e y). 
+    -son 4 vertices, o sea son las 4 puntas del cuadrado 
+Puede utilizar arreglos asociativos para implementar cada uno de los vértices. 
+La clase dispondrá de los siguientes métodos:
+11.a. Método constructor _ _construct () que recibe como parámetros las coordenadas de los puntos.
+11.b. Los métodos de acceso de cada uno de los atributos de la clase.
+
+11.c. area(): método que calcula el área del cuadrado.
+    -se calcula: lado * lado = lo calculo tomando x-x o y-y
+
+11.d. desplazar($d): método que recibe por parámetro un punto y desplaza el cuadrado en el plano
+desde su punto mas inferior izquierdo.
+    -o sea entra un vertice x parametro y?
+
+11.e. aumentarTamaño($t): método que recibe por parámetro el tamaño que debe aumentar el cuadrado.
+    -el tamaño nuevo es seteado? o sea tengo la variable lado la cual tiene un valor, y ese valor se cambia por el q entra por parametro, por lo que también tiene que cambiar el area (el metodo)
+
+11.f. Redefinir el método _ _toString() para que retorne la información de los atributos de la clase.
+11.g. Crear un script Test_Cuadrado que cree un objeto Cuadrado e invoque a cada uno de los
+métodos implementados.

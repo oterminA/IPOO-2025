@@ -1,0 +1,34 @@
+12. Definir una clase Linea con cuatro atributos: pA , p B, pC y pD donde ( pA , p B ) y ( pC,pD ) son 2 puntos
+por los que pasa la línea en un espacio de dos dimensiones. La clase dispondrá de los siguientes métodos:
+12.a. Método constructor _ _construct() que recibe como parámetros las coordenadas de los puntos.
+12.b. Los métodos de acceso de cada uno de los atributos de la clase.
+
+
+12.c. mueveDerecha($d): Desplaza la línea a la derecha la distancia(d) que se recibe por parámetro.
+    -seria el punto 1 (pA, pB) y el punto 2(pC, pD)
+    -Nuevo punto 1: (pA + d)
+    -Nuevo punto 2: (pD + d)
+    -porque pA y pD son x, y la x se mueve a la derecha (por lo q tengo que sumar)
+
+12.d. mueveIzquierda($d): Desplaza la línea a la izquierda la distancia(d) que se recibe por parámetro.
+-seria el punto 1 (pA, pB) y el punto 2(pC, pD)
+    -Nuevo punto 1: (pA - d)
+    -Nuevo punto 2: (pD - d)
+    -porque pA y pD son x, y la x se mueve a la izquierda (por eso resto)
+
+12.e. mueveArriba($d): Desplaza la línea hacia arriba la distancia que se recibe por parámetro.
+    -seria el punto 1 (pA, pB) y el punto 2(pC, pD)
+    -Nuevo punto 1: (pB + d)
+    -Nuevo punto 2: (pC + d)
+    -porque pB y pC son y, y la y se mueve arriba (por lo q tengo que sumar)
+
+12.f. mueveAbajo($d): Desplaza la línea hacia abajo la distancia que se recibe por parámetro.
+-seria el punto 1 (pA, pB) y el punto 2(pC, pD)
+    -Nuevo punto 1: (pB - d)
+    -Nuevo punto 2: (pC - d)
+    -porque pB y pC son y, y la y se mueve abajo (por lo q tengo que restar)
+
+
+12.g. Redefinir el método _ _toString() para que retorne la información de los atributos de la clase.
+12.h. Crear un script Test_Linea que cree un objeto Linea e invoque a cada uno de los
+métodos implementados.
