@@ -1,0 +1,25 @@
+1). Defina e implemente una clase Cliente que hereda de la clase Persona (DNI, Nombre y Apellido) con la información básica de un cliente (Nro. de Cliente, DNI, Nombre y Apellido).
+2). Defina e implemente una clase “Cuenta” que contenga la información de una cuenta de un banco y haga referencia a su dueño. Tener en cuenta que las cuentas pueden ser de 2 tipos: Cuenta Corriente o Caja de Ahorro.
+Nota: La Cuenta Corriente se distingue de una Caja de Ahorro porque su dueño puede girar en descubierto. Es por ello que la clase Cuenta Corriente debe tener un atributo que determine el monto máximo para girar en descubierto. 
+(tengo que hacer una clase padre y dos clases hijas que serian las cuentas? yes)
+Implementar los siguientes métodos en la clase:
+    1. saldoCuenta() : retorna el saldo de la cuenta.
+    2. realizarDeposito(monto): permite realizar un depósito a la cuenta una cantidad “monto” de dinero.
+    3. realizarRetiro(monto): permite realizar un retiro de la cuenta por una cantidad “monto” de dinero.
+3). Defina una clase Banco con las siguiente variables instancias:
+    1. coleccionCuentaCorriente: variable que contiene una colección de instancias de la clase Cuentas Corrientes.
+    2. coleccionCajaAhorro: variable que contiene una colección de instancias de la clase Caja de Ahorro . 3. ultimoValorCuentaAsignado: variable que contiene el ultimo valor asignado a una cuenta del banco. 4. coleccionCliente: variable que contiene una colección de instancias de la clase Cliente
+4). En la clase Banco defina e implemente los siguientes métodos: 
+    1. incorporarCliente(objCliente): permite agregar un nuevo cliente al Banco
+    2. incorporarCuentaCorriente(numeroCliente, montoDescubierto): Agregar una nueva Cuenta a la colección de cuentas, verificando que el cliente dueño de la cuenta es cliente del Banco.
+    3. incorporarCajaAhorro(numeroCliente):Agregar una nueva Caja de Ahorro a la colección de cajas de ahorro, verificando que el cliente dueño de la cuenta es cliente del Banco.
+    4. realizarDeposito(numCuenta,monto): Dado un número de Cuenta y un monto, realizar depósito. 
+    5. realizarRetiro(numCuenta,monto): Dado un número de Cuenta y un monto, realizar retiro.
+5). Implemente una clase TestBanco que realice las siguientes operaciones: 
+    1. Crear un objeto de la clase Banco. 
+    2. Crear dos nuevos clientes Cliente1 y Cliente2, y agregarlos al banco. 
+    3. Crear dos Cuentas Corrientes, una asociada al cliente A y otra al cliente B, y agregarlas al Banco.
+    4. Crear tres Cajas de Ahorro, dos asociadas al cliente A y una asociada al cliente B, y agregarlas al Banco . 
+    5. Depositar $300 en cada una de las Cajas de Ahorro. 
+    6. Transferir $150 de la Cuenta Corriente de Cliente1, a la Caja de Ahorro de Cliente2. 
+    7. Mostrar los datos de todas las cuentas
