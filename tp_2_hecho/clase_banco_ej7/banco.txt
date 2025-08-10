@@ -1,0 +1,38 @@
+-------no entiendo si tengo que usar los metodos de la clase anterior + los metodos de esta clase? :(
+
+7. Realizar las modificaciones necesarias en la clase Banco para poder gestionar colas de trámites además de
+colas de clientes. De cada trámite se conoce el cliente que le da inicio. Asimismo del trámite también se
+conoce: la fecha de ingreso, la fecha de cierre, el horario de ingreso y el horario de cierre.
+Implementar los siguientes métodos:
+a) ingresarTramite: esta etapa es cuando la persona ya esta en el mostrador explicando el trámite para
+que sea tratado. Ya salió de la cola de trámites y está siendo atendido en el mostrador correspondiente.
+b) cerrarTramite: es cuando el trámite ha sido resuelto. Además, debe validar que el tramite a cerrar está
+abierto y setearlo en estado cerrado.
+c) mostrador–> cantTramitesAtendidosMes(): el método retorna la cantidad promedio de trámites
+resueltos por día en este mes.
+d) mostrador–> porcentajeTramitesResuelto(): método que da el porcentaje de tramites resueltos sobre
+el total de recibidos.
+e) tramite–>cantTramitesAbiertos(): método que retorna la cantidad de trámites abiertos de un cliente. //deberia recibir el dni del cliente?
+f) tramite–>cantTramitesCerrados(): método que retorna la cantidad de trámites cerrados de un cliente.
+g) banco–>promTramitesIngresadosDia(): método que retorna el promedio de trámites ingresados por
+día.
+i) banco–>mostradorResuelveMasTramites(): método que retorna el mostrador con mayor porcentaje de
+tramites resueltos (sobre el total recibido) en el mes actual (o en un rango de fechas - pueden usar el
+tda fecha o clases de php, por ejemplo usar el getdate() de Php).
+
+cola tramite -> $cliente, $fechaINgreso, $horario ingreso, $horario cierre, $estado (aunque podria fijarme si la hora de cierre != null y así puedo saber el estado?)
+    -cantTramitesAbiertos
+    -cantTramitesCerrados
+
+banco -> $arrayMostradores
+    -promTramitesCerradosDia
+    -mostradorResuelveMasTramites
+
+mostrador-> $arrayColaTramites, $objetoColaCliente
+    -ingresarTramite
+    -cerrarTramite ?
+    -cantTramitesAtendidosMes
+    -porcentajeTramitesResuelto
+
+cola cliente -> $arrayClientes?, $capacidadMaxima
+persona -> $nombre, $apellido, $tipoDoc, $nroDoc, ¿$tramite?

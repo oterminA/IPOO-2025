@@ -1,0 +1,18 @@
+
+
+5. Realizar las modificaciones que crea necesaria en la clase implementada en el punto 4 para poder almacenar
+información de los libros que va leyendo una persona. Implementar los siguientes métodos:
+-o sea tengo que hacer una clase Lectura que reciba un solo parametro con un array de libros que están leidos:
+    -private $librosLeidos; //array de libros, cada libro de ahi adentro tiene (isbn, titulo, editorial, año edicion, objAutor(nombre, apellido, doc y tipoDoc), cantPaginas, sinopsis) 
+    -arrayLibros -> objLibro-> info libro-> info obj autor
+
+a) libroLeido($titulo): retorna true si el libro cuyo título recibido por parámetro se encuentra dentro del
+conjunto de libros leídos y false en caso contrario.
+
+b) darSinopsis($titulo): retorna la sinopsis del libro cuyo título se recibe por parámetro.
+
+c) leidosAnioEdicion($x): que retorne todos aquellos libros que fueron leídos y su año de edición es un
+año X recibido por parámetro.
+
+d) darLibrosPorAutor($nombreAutor): retorna todos aquellos libros que fueron leídos y el nombre de su
+autor coincide con el recibido por parámetro
